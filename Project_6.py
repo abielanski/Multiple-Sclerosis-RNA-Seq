@@ -4,8 +4,8 @@ from Bio import Entrez
 
 # 1
 # Create a new directory for the project
-#os.system("mkdir Project_6")
-#os.chdir("Project_6")
+os.system("mkdir Project_6")
+os.chdir("Project_6")
 
 # Generate the log file
 log_file = open("Project_6.log", "w")
@@ -13,7 +13,7 @@ log_file.write("Log file generated.")
 log_file.close()
 
 # Retrieving the reference transcriptome of transgenic mice
-#os.system("wget https://ftp.ensembl.org/pub/release-109/fasta/mus_musculus/cdna/Mus_musculus.GRCm39.cdna.all.fa.gz")
+os.system("wget https://ftp.ensembl.org/pub/release-109/fasta/mus_musculus/cdna/Mus_musculus.GRCm39.cdna.all.fa.gz")
 
 # Running Kallisto and Retrieving the Dr. Chen's Data
 Chen_data = "/home/data/Chen_data"
@@ -22,7 +22,7 @@ Chen_data = "/home/data/Chen_data"
 Ref_T_path = "/home/amishra1/Project_6"
 
 # Indexing command 
-#os.system(f"time kallisto index -i MS.idx Mus_musculus.GRCm39.cdna.all.fa.gz")
+os.system(f"time kallisto index -i MS.idx Mus_musculus.GRCm39.cdna.all.fa.gz")
 
 # Set the index path to be used later in the Kallisto quantification step
 index_path = "MS.idx"
