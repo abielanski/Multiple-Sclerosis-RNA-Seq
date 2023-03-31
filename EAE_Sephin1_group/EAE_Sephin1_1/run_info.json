@@ -1,0 +1,13 @@
+{
+	"n_targets": 116912,
+	"n_bootstraps": 100,
+	"n_processed": 116912,
+	"n_pseudoaligned": 44557,
+	"n_unique": 42626,
+	"p_pseudoaligned": 38.1,
+	"p_unique": 36.5,
+	"kallisto_version": "0.46.1",
+	"index_version": 10,
+	"start_time": "Mon Mar 27 12:24:49 2023",
+	"call": "kallisto quant -i MS.idx -o EAE_Sephin1_group/EAE_Sephin1_1 -b 100 -t 4 /home/amishra1/Project_6/Mus_musculus.GRCm39.cdna.all.fa.gz /home/data/Chen_data/YC-S3_S4_L004_R1_001.fastq.gz"
+}
