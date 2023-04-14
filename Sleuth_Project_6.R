@@ -13,7 +13,6 @@ stab = read.table("ChenDatatable.txt",header=TRUE,stringsAsFactors=FALSE)
 # initilize object using sleuth function 
 so = sleuth_prep(stab)
 
-
 ### Preforming differential Expression analysis ### 
 
 #fit model comparing the two conditions 
@@ -47,17 +46,17 @@ write.table(sleuth_significant, file="Chen1_results.txt",quote = FALSE,row.names
 head(dplyr::select(sleuth_significant, target_id, pval, qval), n=10)
 
 
-#### Plot top trancipts ### 
+#### Plot top transcipts ### 
 
 #first extract needed results from kallisto for plotting 
 so = sleuth_prep(stab, extra_bootstrap_summary = TRUE, 	read_bootstrap_tpm = TRUE)
 
 #call plot_bootstrap function 
-topplot = plot_bootstrap(so, "ENST00000244741.10", units = "tpm", 	color_by = "condition") 
+topplot = plot_bootstrap(so, "Chen_data_bootstrap", units = "tpm", 	color_by = "condition") 
 topplot
 
 #save plot as PNG file
-png("ENST00000244741.10_TPM.png") 
+png("Chen_data.png") 
 topplot 
 dev.off()
 
