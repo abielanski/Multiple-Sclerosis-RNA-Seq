@@ -3,7 +3,7 @@ See Wiki section for information about the project.
 
 # Updates
 
-## April 13, 2023
+## April 21, 2023
 
 - re-editing of the python script that produces the Kallisto outputs to be used in sleuth 
 - removal of the old Kallisto output files
