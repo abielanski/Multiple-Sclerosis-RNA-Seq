@@ -5,7 +5,7 @@ See Wiki section for information about the project.
 
 ## April 21, 2023
 
-- re-editing of the python script that produces the Kallisto outputs to be used in sleuth 
+- re-editing of Sleuth code to produce proper output files necessary for WebGestalt
 - removal of the old Kallisto output files
 - re-editing of the R - script that runs sleuth to produce necessary outputs
   - Plotting the top target id and saving as PNG file 
