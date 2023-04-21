@@ -6,13 +6,13 @@ Built in Python modules and libraries:
 
 - os
 
-- Biopython (package Entrez)
+- Biopython(package Entrez)
 
 R packages and libraries:
 
 - dplyr
 
-- BiocLite (package BiomaRt)
+- BiocLite(package BiomaRt)
 
 Programs:
 
