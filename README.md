@@ -4,21 +4,21 @@ See Wiki section for information about the project.
 # Dependancies
 Built in Python modules and libraries:
 
- -os
+ +os
 
--Bio
++Bio
 
--Entrez
++Entrez
 
 Neccessary programs:
 
--Kallisto 
++Kallisto 
 
--Sleuth
++Sleuth
 
 Web-Based tools:
 
--WebGestalt
++WebGestalt
 
 
 
