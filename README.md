@@ -4,11 +4,15 @@ See Wiki section for information about the project.
 # Dependancies
 Built in Python modules and libraries:
 
-os
+-os
+-Bio
+-Entrez
 
-Bio
+Neccessary programs:
 
-Entrez
+Kallisto 
+
+Sleuth
 
 
 
