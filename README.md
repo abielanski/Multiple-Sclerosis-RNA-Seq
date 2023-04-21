@@ -6,15 +6,19 @@ Built in Python modules and libraries:
 
 - os
 
-- Bio
+- Biopython (package Entrez)
 
-- Entrez
+R packages and libraries:
+
+- dplyr
+
+- BiocLite (package BiomaRt)
 
 Programs:
 
-- Kallisto 
+- Kallisto(Command line)
 
-- Sleuth
+- Sleuth(R Library)
 
 Web-Based tools:
 
