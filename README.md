@@ -2,6 +2,9 @@
 See Wiki section for information about the project.
 
 # Dependancies
+Os
+Bio
+Entrez
 
 
 # Updates
