@@ -13,11 +13,11 @@ The initial input files were provided by Dr. Chen and made accessible to us on o
 
 # Dependancies
 Package installation for Python:
-
-- os
-
-- Biopython
-  - package Entrez
+```
+import os 
+import Bio
+from Bio import Entrez
+```
 
 R packages and libraries:
 
