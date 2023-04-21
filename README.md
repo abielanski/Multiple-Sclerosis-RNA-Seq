@@ -2,6 +2,11 @@
 See Wiki section for information about the project.
 
 # Dependancies
+Built in Python modules and libraries:
+os 
+Bio
+Entrez
+
 
 
 
