@@ -5,9 +5,7 @@ See Wiki section for information about the project.
 Built in Python modules and libraries:
 
 os 
-
 Bio
-
 Entrez
 
 
