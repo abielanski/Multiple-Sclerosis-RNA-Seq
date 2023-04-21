@@ -21,6 +21,9 @@ from Bio import Entrez
 
 Package installation for R:
 ```
+library(sleuth)
+library(dplyr)
+
 source("https://bioconductor.org/biocLite.R")
 biocLite("biomaRt")
 
