@@ -1,5 +1,15 @@
+# downloading biomaRt and loading the package:
+source("https://bioconductor.org/biocLite.R")
+biocLite("biomaRt")
+
+suppressMessages({
+  library('cowplot')
+  library('sleuth')
+})
+
 ### creation of table containing sample names, condition and path ###
 ChenDataTable <- read.csv(file = 'ChenDataTable.csv')
+
 
 # Code below adapted from slides: 
 
@@ -23,6 +33,16 @@ so = sleuth_fit(so, ~1, 'reduced')
 
 #perform the likelihood ratio test for differential expression between conditions 
 so = sleuth_lrt(so, 'reduced', 'full')
+
+#preform a wald test
+# CFA v Vehicle
+so = sleuth_wt(so, which_beta = 'condition.CFA', 'condition.EAE_Vehicle', which_model = 'full')
+
+# CFA v Sephin 
+so = sleuth_wt(so, which_beta = 'condition.CFA', 'condition.EAE_Sephin1', which_model = 'full')
+
+# Vehicle v Sephin 
+so = sleuth_wt(so, which_beta = 'condition.EAE_Vehicle', 'condition.EAE_Sephin1', which_model = 'full')
 
 ### To look at the most signifcant results ###
 
@@ -59,5 +79,4 @@ topplot
 png("Chen_data.png") 
 topplot 
 dev.off()
-
 
