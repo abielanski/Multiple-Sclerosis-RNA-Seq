@@ -19,13 +19,14 @@ import Bio
 from Bio import Entrez
 ```
 
-R packages and libraries:
+Package installation for R:
+```
+source("https://bioconductor.org/biocLite.R")
+biocLite("biomaRt")
 
-- dplyr
-
-- BiocLite
-  - package BiomaRt
-
+library('cowplot')
+library('sleuth')
+```
 Programs:
 
 - Kallisto
