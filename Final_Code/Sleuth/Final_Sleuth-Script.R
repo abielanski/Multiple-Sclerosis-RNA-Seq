@@ -120,7 +120,8 @@ for (test_name in names(wald_test_results)) {
 }
 
 
-# Use the first target_id from top_transcripts for plotting
+# Use the first target_id from top_transcripts for plotting for visualization 
+# including creation of a PCR plot and Volcano plot
 
 # Create PCA plot
 pca_plot <- plot_pca(so, color_by = "condition", text_labels = FALSE) +
