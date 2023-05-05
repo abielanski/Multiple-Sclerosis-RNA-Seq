@@ -1,0 +1,10 @@
+sample,condition,path
+CFA_1Ê,CFA,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/CFA_1
+CFA_2Ê,CFA,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/CFA_2
+CFA_3Ê,CFA,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/CFA_3
+EAE_Sephin1_1Ê,EAE_Sephin1,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Sephin1_1
+EAE_Sephin1_2Ê,EAE_Sephin1,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Sephin1_2
+EAE_Sephin1_3Ê,EAE_Sephin1,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Sephin1_3
+EAE_Vehicle_1Ê,EAE_Vehicle,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Vehicle_1
+EAE_Vehicle_2Ê,EAE_Vehicle,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Vehicle_2
+EAE_Vehicle_3Ê,EAE_Vehicle,/home/<yourUNIVID>/Multiple_Sclerosis_Kallisto/kallisto_results/EAE_Vehicle_3
