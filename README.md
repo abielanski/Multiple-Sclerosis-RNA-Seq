@@ -14,14 +14,21 @@ from Bio import Entrez
 
 Package installation for R:
 ```
+# install.packages("devtools")
+# devtools::install_github("pachterlab/sleuth")
 library(sleuth)
+
+# install.packages("dplyr")
+# package for data manipulation
 library(dplyr)
 
-source("https://bioconductor.org/biocLite.R")
-biocLite("biomaRt")
+# install.packages("biomaRt")
+#a package that provides an interface to BioMart databases (e.g., Ensembl).
+library(biomaRt)
 
-library('cowplot')
-library('sleuth')
+# install.packages("ggplot2")
+# a powerful package for creating static, interactive, and animated graphics
+library(ggplot2)
 ```
 # Scripts
 All of the scripts can be found under 'Final_code'. The scripts must be run in the order described below. Information about how to run the scripts, including what packages are necessary, are also found in the script comments. A WebGestalt tutorial is also available under /Final_code/WebGestalt. 
