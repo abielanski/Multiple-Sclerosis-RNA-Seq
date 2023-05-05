@@ -1,0 +1,13 @@
+{
+	"n_targets": 116912,
+	"n_bootstraps": 100,
+	"n_processed": 34033612,
+	"n_pseudoaligned": 20427764,
+	"n_unique": 5467679,
+	"p_pseudoaligned": 60.0,
+	"p_unique": 16.1,
+	"kallisto_version": "0.46.1",
+	"index_version": 10,
+	"start_time": "Tue Apr  4 15:07:44 2023",
+	"call": "kallisto quant -i MS.idx -o kallisto_results/CFA_3 --single -l 200 -s 20 -b 100 -t 4 /home/data/Chen_data/YC-C3_S7_L004_R1_001.fastq.gz"
+}

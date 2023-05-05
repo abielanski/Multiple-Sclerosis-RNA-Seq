@@ -1,0 +1,13 @@
+{
+	"n_targets": 116912,
+	"n_bootstraps": 100,
+	"n_processed": 31480066,
+	"n_pseudoaligned": 21836705,
+	"n_unique": 5577103,
+	"p_pseudoaligned": 69.4,
+	"p_unique": 17.7,
+	"kallisto_version": "0.46.1",
+	"index_version": 10,
+	"start_time": "Tue Apr  4 15:34:54 2023",
+	"call": "kallisto quant -i MS.idx -o kallisto_results/EAE_Vehicle_2 --single -l 200 -s 20 -b 100 -t 4 /home/data/Chen_data/YC-V2_S2_L004_R1_001.fastq.gz"
+}

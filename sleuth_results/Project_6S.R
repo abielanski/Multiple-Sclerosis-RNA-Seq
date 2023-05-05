@@ -1,8 +1,19 @@
 # Install and Load the required libraries
+
+# install.packages("devtools")
+# devtools::install_github("pachterlab/sleuth")
 library(sleuth)
+
+# install.packages("dplyr")
+# package for data manipulation
 library(dplyr)
-library(readr)
+
+# install.packages("biomaRt")
+#a package that provides an interface to BioMart databases (e.g., Ensembl).
 library(biomaRt)
+
+# install.packages("ggplot2")
+# a powerful package for creating static, interactive, and animated graphics
 library(ggplot2)
 
 # Read in the table describing samples and Kallisto output paths   
@@ -51,15 +62,18 @@ for (i in 1:(length(unique_conditions) - 1)) {
   }
 }
 
-# Combine the LRT and Wald test results for all comparisons
-combined_results <- c(list(lrt = results_table_lrt), wald_test_results)
+# Process and save the results for LRT test comparisons
+for (test_name in names(list(lrt = results_table_lrt))) {
+  results <- list(lrt = results_table_lrt)[[test_name]]
+  
+  # Write FDR < 0.05 transcripts to file
+  output_file <- paste0("fdr05_results_", test_name, ".txt")
+  write.table(results, file = output_file, sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+}
 
-# Sleuth live can't be used with a list of multiple comparisons, so it's commented out
-# sleuth_live(combined_results)
-
-# Process and save the results for LRT and Wald test comparisons
-for (test_name in names(combined_results)) {
-  results <- combined_results[[test_name]]
+# Process and save the results for Wald test comparisons
+for (test_name in names(wald_test_results)) {
+  results <- wald_test_results[[test_name]]
   
   # Write FDR < 0.05 transcripts to file
   output_file <- paste0("fdr05_results_", test_name, ".txt")
@@ -79,7 +93,7 @@ for (test_name in names(combined_results)) {
   ensembl_transcript_ids <- transcript_ids
   
   t2g <- getBM(filters = "ensembl_transcript_id_version",
-               attributes = c("ensembl_transcript_id_version", "ensembl_gene_id"),
+               attributes = c("ensembl_transcript_id_version", "ensembl_gene_id",'external_gene_name'),
                values = ensembl_transcript_ids,
                mart = mart)
   
@@ -93,14 +107,15 @@ for (test_name in names(combined_results)) {
   # Remove any rows with missing gene IDs or scores
   rnk <- na.omit(rnk)
   
-  # Save the ranked gene list as a tab-separated file for WebGestalt without column names
-  write.table(rnk, file = "gene_ids_with_scores.rnk", sep = "\t", quote = FALSE, col.names = FALSE, row.names = FALSE)
+  rnk_file <- paste0("gene_ids_with_scores_", test_name, ".rnk")
+  write.table(rnk, file = rnk_file, sep = "\t", quote = FALSE, col.names = FALSE, row.names = FALSE)
   
   # Ensure there are no spaces around the tab delimiter
-  rnk_content <- readLines("gene_ids_with_scores.rnk")
+  rnk_content <- readLines(rnk_file)
   rnk_content <- gsub("\\s+\\t|\\t\\s+", "\t", rnk_content)
-  writeLines(rnk_content, "gene_ids_with_scores.rnk")
+  writeLines(rnk_content, rnk_file)
 }
+
 
 # Use the first target_id from top_transcripts for plotting
 
@@ -143,4 +158,3 @@ for (test_name in c("wt_CFA_vs_EAE_Sephin1", "wt_CFA_vs_EAE_Vehicle", "wt_EAE_Se
   ggsave(paste0("volcano_plot_", test_name, ".png"), plot = volcano_plot, width = 7, height = 5, dpi = 300)
 }
 
-       
