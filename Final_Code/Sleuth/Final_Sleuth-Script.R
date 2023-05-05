@@ -18,7 +18,9 @@ library(biomaRt)
 library(ggplot2)
 
 # Read in the table describing samples and Kallisto output paths   
-stab <- read.csv("table.csv", header = TRUE, stringsAsFactors = FALSE, sep = ",")
+# The table can be found under the 'Sleuth' folder 
+# Download this table into the directory with the Kallisto results
+stab <- read.csv("sleuthTable.csv", header = TRUE, stringsAsFactors = FALSE, sep = ",")
 
 # Create a unique list of conditions from the 'condition' column of your input data
 unique_conditions <- unique(stab$condition)
