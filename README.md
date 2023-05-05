@@ -31,7 +31,8 @@ All of the scripts can be found under 'Final_code'. The scripts must be run in t
    - Input: 
      - RNA-Seq reads of the translated transcripts
    - Output: 
-     - 3 files: one compressed file with all the quantifications and bootstraps, another file with the abundances and counts for each transcript, and the last file with run time information
+     - 3 folders for each of the experimental groups
+         - one compressed file with all the quantifications and bootstraps, another file with the abundances and counts for each transcript, and the last file with run time information
 
 2. Final_Sleuth-Script.R
    - Used to perform differential gene analysis
