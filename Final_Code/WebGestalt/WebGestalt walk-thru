@@ -1,0 +1,11 @@
+Here is a walk through of how to reproduce results obtained from WebGestalt: 
+
+1. Head to https://www.webgestalt.org - this is the WebGestalt web browser. 
+
+2. Under 'Basic Parameters': use the drop down menu to chose 'Mus musculus' as Organism of Intrest, 'Gene Set Enrichment Analysis (GSEA)' as Method of Intrest. 
+
+3. Under 'Gene List': use the drop down menu to chose 'ensembl gene id' as Select Gene ID Type. Upload the .rnk file produced from Sleuth under Upload Gene List. Be sure to note which .rnk file you are uploading, as each file tests 2 different groups (i.e. 1 .rnk tests CFA vs Vehicle, another tests CFA vs Sephin1 and the third tests Vehicle vs Sephin)
+
+4. Click submit! You will be taken to a seperate webpage, where you will see Enrichment results including a table of all of the significant genes, a bar chart, volcano plot and DAG. 
+
+5. To download the data, click 'Results Download' on the top right corner.
