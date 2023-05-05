@@ -59,4 +59,4 @@ All of the scripts can be found under 'Final_code'. The scripts must be run in t
 The data used in this project is Dr. Yanan Chen's unpublished translated transcriptomes, available to Loyola Univeristy Chicago student/staff with access to the Spring 2023 Computational Biology class server. The path to access this data in the class server is found in the Kallisto.py code in the Final_code folder. 
 
 # Output 
-The outputs of this project can be downloaded from Webgestalt. 
+The outputs of this project can be downloaded from Webgestalt and Sleuth. 
