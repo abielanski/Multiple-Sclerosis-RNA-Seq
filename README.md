@@ -34,18 +34,18 @@ All of the scripts can be found under 'Final_code'. The scripts must be run in t
      - 3 files: one compressed file with all the quantifications and bootstraps, another file with the abundances and counts for each transcript, and the last file with run time information
 
 2. Final_Sleuth-Script.R
-  - Used to perform differential gene analysis
+   - Used to perform differential gene analysis
    - Input: 
-     - Output folders from Kallisto
+      - Output folders from Kallisto
    - Output: 
-     - 3 .rnk files, one for each comparison group (CFA vs Sephin, CFA vs Vehicle and Vehicle vs Sephin)
+      - 3 .rnk files, one for each comparison group (CFA vs Sephin, CFA vs Vehicle and Vehicle vs Sephin)
 
-4. Webgestalt (available at https://www.webgestalt.org) 
-  - Used for the extraction of biological insight from genes of interest
+3. Webgestalt (available at https://www.webgestalt.org)
+   - Used for the extraction of biological insight from genes of interest
    - Input: 
-     - .rnk file produced from Sleuth
+      - .rnk file produced from Sleuth
    - Output: 
-     - Graphs including Volcano Plots, Bar Charts, and tables including gene list
+      - Graphs including Volcano Plots, Bar Charts, and tables including gene list
 
 
 
